@@ -1,0 +1,15 @@
+{
+  "name": "pricetracker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/toyota.mjs"
+  },
+  "dependencies": {
+    "graphql-request": "6.1.0",
+    "playwright": "1.40.1",
+    "@playwright/browser-firefox": "1.40.1",
+    "mysql2": "3.7.0",
+    "dotenv": "16.3.1"
+  }
+}
