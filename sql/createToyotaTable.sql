@@ -21,5 +21,6 @@ CREATE TABLE `resultsToyota` (
     `extColor_marketingName` VARCHAR(35) CHARACTER SET utf8,
     `extColor_nvsName` VARCHAR(23) CHARACTER SET utf8,
     `extColor_colorFamilies` VARCHAR(5) CHARACTER SET utf8,
+    `addedDate` DATE DEFAULT (CURRENT_DATE),
     PRIMARY KEY (`vin`)
 );
