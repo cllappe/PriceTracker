@@ -115,7 +115,7 @@ const query = gql`
   }
 `;
 
-(async () => {
+async function getToyotaDataRaw(){
     await getValidHeaders();
 
     const graphqlClient = new GraphQLClient('https://api.search-inventory.toyota.com/graphql',{
@@ -133,4 +133,7 @@ const query = gql`
             console.error(err)
             return
         }});
-})();
+
+};
+
+export { getToyotaDataRaw };

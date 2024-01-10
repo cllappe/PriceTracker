@@ -1,6 +1,5 @@
-import { mysql2 } from 'mysql2';
-import 'dotenv/config';
+import { processToyota } from './toyota/processToyotaData.mjs';
+import { getToyotaDataRaw } from './toyota/getToyotaData.mjs';
 
-const connection = mysql2.createConnection(process.env.DATABASE_URL);
-
-connection.end();
+await getToyotaDataRaw();
+await processToyota();
