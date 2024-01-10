@@ -19,4 +19,14 @@ function insertToyota(values){
     });
 }
 
-export { insertToyota };
+function insertCadillac (values) {
+    const connection = createConnection();
+    var sql = "INSERT INTO resultsCadillac (vin, make, year, dealer, dealerFeaturedPrice, netPrice, msrp, sellingPrice, discounts, driveType, model, color) VALUES ? ON DUPLICATE KEY UPDATE vin=vin";
+    connection.query(sql, [values], function (err, result) {
+        if (err) throw err;
+        console.log("Number of records inserted: " + result.affectedRows);
+        closeConnection(connection);
+    });
+}
+
+export { insertToyota, insertCadillac };

@@ -46,4 +46,4 @@ async function getCadillacDataRaw() {
   });
 }
 
-getCadillacDataRaw();
+export { getCadillacDataRaw };
