@@ -15,9 +15,7 @@ async function getValidHeaders() {
   const browser = await firefox.launch();
   const page = await browser.newPage();
   page.on("request", interceptRequest);
-  await page.goto('https://www.toyota.com/search-inventory');
-  await page.getByPlaceholder("ZIP Code").fill("80919");
-  await page.click("button[type='submit']");
+  await page.goto('https://www.toyota.com/search-inventory/model/highlanderhybrid/?zipcode=80919');
   await page.waitForLoadState("networkidle");
   await browser.close();
 }

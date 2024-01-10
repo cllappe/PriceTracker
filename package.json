@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node src/toyota.mjs"
+    "start": "node src/app.mjs"
   },
   "dependencies": {
     "graphql-request": "6.1.0",
