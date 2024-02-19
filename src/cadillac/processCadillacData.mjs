@@ -23,9 +23,14 @@ async function processCadillac(){
             vehicleSql.push(parseInt(vehicle.pricing.cash.netPrice.value));
             var discounts = 0;
             var discountsObj = vehicle.pricing.cash.discounts;
-            Object.keys(discountsObj).forEach(function(key) {
-                discounts += parseInt(discountsObj[key].value);
-            });
+            if (discountsObj === undefined) {
+                discountsObj = {};
+            }
+            else {
+                Object.keys(discountsObj).forEach(function(key) {
+                    discounts += parseInt(discountsObj[key].value);
+                });
+            }
             vehicleSql.push(discounts);
             vehicleSql.push(vehicle.driveType);
             vehicleSql.push(vehicle.variant.name);
