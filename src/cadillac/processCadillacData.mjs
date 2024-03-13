@@ -10,7 +10,7 @@ async function processCadillac(){
         }
         var obj = JSON.parse(data);
         var vehicles = [];
-        for (var i = 0; i < obj.data.count; i++) {
+        for (var i = 0; i < Object.keys(obj.data.hits).length; i++) {
             var vehicle = obj.data.hits[i];
             var vehicleSql = [];
             vehicleSql.push(vehicle.id);
